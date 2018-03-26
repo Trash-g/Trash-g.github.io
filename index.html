@@ -16,7 +16,13 @@
       var Backgrounds = ['#e3e3e3','#fdfffc', '#fdfffc', '#fdfffc', '#131313', '#fdfffc', '#e3e3e3', '#e3e3e3', '#ffffff', '#e3e3e3', '#e3e3e3', '#fdfffc', '#e3e3e3', '#e3e3e3'];
       var Choice = Math.floor(Math.random() * Images.length);
       document.getElementById("image").src = Images[Choice];
-	  document.body.style.background = Backgrounds[Choice];
+      document.body.style.background = Backgrounds[Choice];
+      var Death = Math.random();
+			if (Death > 0.999){
+				var DeathSound = new Audio('kiddykong.mp3');
+				DeathSound.loop = false;
+				DeathSound.play();
+			}
     }
     window.onload = Gay();
   </script>
